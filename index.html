@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+
+    <h2>На нашем сайте медиа могут публиковать контакты для рекламы</h2>
+
+    <button class="btn btn-warning" onclick="location.href='/create'">создать объявление</button>
+
+    {{ values }}
+</div>
+
+{% endblock %}
