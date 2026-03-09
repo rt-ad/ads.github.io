@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Добавить запись{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Telegram</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <h3>{{user.username}}</h3>
+        {{ form.anons }}<br>
+        {{ form.title }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+
+        {{ form.errors }}
+        <button class="btn btn-warning" type="submit" onclick="location.href='/index'">Создать объявление</button>
+    </form>
+</div>
+
+{% endblock %}

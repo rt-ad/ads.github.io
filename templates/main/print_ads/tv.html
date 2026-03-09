@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>TV</h1>
+
+        {% csrf_token %}
+
+        {% for i in users %}
+            <div class="alert alert-warning">
+                <h3>{{ i.id }}</h3>
+
+            </div>
+
+        {% endfor %}
+        {% for el in telev %}
+
+
+            <div class="alert alert-warning">
+                <h3>{{el.username}}</h3>
+
+                <h3>{{ el.anons }}</h3>
+                <a>{{ el.title }}</a>
+                <p>{{ el.full_text }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
